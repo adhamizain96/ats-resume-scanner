@@ -1,0 +1,13 @@
+import sys
+sys.path.append(r"C:\Users\azadi\OneDrive\Desktop\adhamizain96\ats-resume-scanner\src\py_modules")
+
+from jd_parser import load_jd
+from parser import parse_resume
+from scorer import score_resume
+from keyword_extractor import all_skills
+
+jd = load_jd(r"C:\Users\azadi\OneDrive\Desktop\adhamizain96\ats-resume-scanner\data\sample_jd.txt")
+resume = parse_resume(r"C:\Users\azadi\OneDrive\Desktop\adhamizain96\ats-resume-scanner\data\sample_jd.pdf")["raw_text"]
+
+result = score_resume(jd, resume, all_skills)
+print(result)  
