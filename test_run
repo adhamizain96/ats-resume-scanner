@@ -6,8 +6,8 @@ from parser import parse_resume
 from scorer import score_resume
 from keyword_extractor import all_skills
 
-jd = load_jd(r"C:\Users\azadi\OneDrive\Desktop\adhamizain96\ats-resume-scanner\data\sample_jd.txt")
+jd = load_jd(r"C:\Users\azadi\OneDrive\Desktop\adhamizain96\ats-resume-scanner\data\sample_jd_1.txt")
 resume = parse_resume(r"C:\Users\azadi\OneDrive\Desktop\adhamizain96\ats-resume-scanner\data\sample_resume.pdf")["raw_text"]
 
 result = score_resume(jd, resume, all_skills)
-print(result) 
+print(result)  
